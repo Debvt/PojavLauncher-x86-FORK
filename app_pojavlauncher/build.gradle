@@ -119,6 +119,17 @@ android {
         versionName getVersionName()
         multiDexEnabled true //important
         resValue 'string', 'curseforge_api_key', getCFApiKey()
+        ndk {
+            abiFilters "x86"
+        }
+        flavorDimensions "abi"
+    productFlavors {
+        x86 {
+            dimension "abi"
+            ndk {
+                abiFilters "x86"
+            }
+        }
     }
 
     buildTypes {
