@@ -1,1 +1,25 @@
-jdnd
+function heapSpray(size, count) {
+    let sprays = []; //used to be Bufferarray 
+    let nestedArray = [];
+    let obj = {};
+    for (var i = 0; i < count; i++) {
+    let largeString = "A".repeat(1000000); // 1 million A's
+    let obj = {};
+        // String concatenation
+        largeString += largeString;
+        if (largeString.length > 100000000)
+            largeString = "A".repeat(1000000);
+        // Array buffer allocation
+        bufferArray.push(new ArrayBuffer(1000000));
+        if (bufferArray.length > 1000) {
+            bufferArray = [];
+        }
+        // Object property expansion
+        obj[counter] = "A".repeat(1000);
+        counter++;
+
+        // Array buffer allocation
+        sprays.push(new ArrayBuffer(size));
+        // Object property expansion
+    }
+}
